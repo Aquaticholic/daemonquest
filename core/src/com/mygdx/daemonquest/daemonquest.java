@@ -17,7 +17,7 @@ public class daemonquest extends ApplicationAdapter {
 		.setPos(170,330)
 		.setSize(300,150)
 		;
-		new Entity("area.png")
+		GameState.playField = new Entity("area.png")
 		.setPos(70,50)
 		.setSize(500,250)
 		;

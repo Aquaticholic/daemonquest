@@ -14,6 +14,7 @@ public class Player extends Entity {
 
     @Override
     public void update(double dt) {
+        //movement
         pos.x += speed * dt * (
             (Gdx.input.isKeyPressed(Input.Keys.A) ? -1 : 0) +
             (Gdx.input.isKeyPressed(Input.Keys.D) ?  1 : 0)
@@ -22,6 +23,17 @@ public class Player extends Entity {
             (Gdx.input.isKeyPressed(Input.Keys.S) ? -1 : 0) +
             (Gdx.input.isKeyPressed(Input.Keys.W) ?  1 : 0)
         );
+        //play bounds
+        if (pos.x < GameState.playField.pos.x)
+            pos.x = GameState.playField.pos.x;
+        if (pos.y < GameState.playField.pos.y)
+            pos.y = GameState.playField.pos.y;
+        if (pos.x + size.x > GameState.playField.pos.x + GameState.playField.size.x)
+            pos.x = GameState.playField.pos.x + GameState.playField.size.x - size.x;
+        if (pos.y + size.y > GameState.playField.pos.y + GameState.playField.size.y)
+            pos.y = GameState.playField.pos.y + GameState.playField.size.y - size.y;
+
+            
         shootTimer -= dt;
         if (shootTimer <= 0 && Gdx.input.isKeyPressed(Input.Keys.SPACE)) {
             new Bullet("bullet.png")

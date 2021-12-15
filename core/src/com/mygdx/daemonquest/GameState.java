@@ -6,4 +6,5 @@ public class GameState {
     //static Integer ammo = Integer.valueOf(10);
     public static Entity daemon;
     public static Entity ruffer;
+    public static Entity playField;
 }
