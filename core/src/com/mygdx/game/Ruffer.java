@@ -36,7 +36,7 @@ public class Ruffer extends Entity{
                     break;
 
                     case 2:
-                    currentAttack = new BigBar();
+                    currentAttack = new CarPattern();
                     break;
                 }
             }

@@ -60,6 +60,7 @@ public class DaemonQuest extends ApplicationAdapter {
 		//set ammo text
 		GameState.ammoText.text = Integer.toString(GameState.ammo) + "/100";
 
+		//main loop
 		EntityManager.defferedActions();
 		EntityManager.updateEntities(dt);
 		ScreenUtils.clear(0, 0, 0, 1);

@@ -21,7 +21,6 @@ public class BombPattern implements AttackPattern{
             .setSize(48, 48);
             ;
         }
-        
     }
 
     public boolean isFinished(){
