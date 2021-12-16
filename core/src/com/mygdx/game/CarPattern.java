@@ -10,7 +10,7 @@ public class CarPattern implements AttackPattern{
         carTimer -= dt;
         if (carTimer <= 0){
             carsLeft--;
-            carTimer = 0.1 + (Math.random() * 0.3);
+            carTimer = 0.25 + (Math.random() * 0.3);
             new Car("car.png")
             .setPos(
                 640,

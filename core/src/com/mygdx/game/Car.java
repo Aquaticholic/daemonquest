@@ -1,7 +1,7 @@
 package com.mygdx.game;
 
 public class Car extends Entity{
-    private static final double speed = 550;
+    private static final double speed = 450;
     Car(String texPath){
         super(texPath);
     }
