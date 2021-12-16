@@ -4,7 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 
 public class Player extends Entity {
-    public final float speed = 300;
+    public final float speed = 250;
     private double shootTimer = 0.d;
     private double ammoTimer = 9.d;
 
